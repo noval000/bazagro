@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css"
+            rel="stylesheet"
+    />
+    <style>
+        header {
+            background: #2B904E;
+            padding: 15px;
+        }
+        ul {
+            list-style: none;
+        }
+        header ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: #fff;
+            list-style: none;
+            margin: 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .header_two {
+            display: flex;
+        }
+        .header_two ul a {
+            color: #000;
+        }
+        .dropdown-menu>li:last-child,
+        .dropdown-menu>li:first-child {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px!important;
+            border-bottom-left-radius: 10px!important;
+            border-bottom-right-radius: 10px!important;
+        }
+        .header_two ul {
+            --mdb-dropdown-item-border-radius: 10px!important;
+            border-top-left-radius: 10px!important;
+            border-top-right-radius: 10px!important;
+            border-bottom-left-radius: 10px!important;
+            border-bottom-right-radius: 10px!important;
+            background: #ccc;
+        }
+        .header_two ul li {
+            background: #ccc;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .none {
+            display: none;
+        }
+        .menu a {
+            margin: 5px 0;
+            transition: .5s all ease;
+            border-bottom: 1px solid transparent;
+        }
+        .menu a:hover {
+            border-bottom: 1px solid #000;
+        }
+
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        select {
+            border: none;
+        }
+        .dropdown-item {
+            border-radius: 10px!important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <ul style="padding: 0;">
+                <li style="margin-right: 40px;">
+                    <a href="./index.html">Вернуться на главную</a>
+                </li>
+                <li>
+                    Продавец: АгроПром
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="header_two" style="margin-top: 20px;">
+            <div class="dropdown show">
+                <button style="background: #2B904E!important;"
+                        data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    Товары
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item active" href="./panel.html">Все товары</a></li>
+                    <li><a class="dropdown-item" href="./import.html">Импорт</a></li>
+                </ul>
+            </div>
+            <div class="dropdown show" style="margin-left: 30px;">
+                <button style="background: #2B904E!important;"
+                        data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    Профиль
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="./profile.html">Редактировать профиль</a></li>
+                </ul>
+            </div>
+            <div class="dropdown show" style="margin-left: 30px;">
+                <button style="background: #2B904E!important;"
+                        data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton2"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    Статистика
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item" href="./statistic.html">Прибыль</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="all_block_card" style="margin-top: 40px;">
+            <div class="btn_admin">
+                <button class="minus_page" style="border: none;background: #2B904E!important;color: #fff;border-radius: 5px;width: 40px;height: 40px;"><</button>
+                <input class="page_number" style="width: 40px;text-align: center;border: none" type="text" value="1">
+                <button class="add_page" style="border: none;background: #2B904E!important;color: #fff;border-radius: 5px;width: 40px;height: 40px;">></button>
+            </div>
+            <div class="block_card" style="margin-top: 40px;">
+                <div class="header_card">
+                    <ul style="display: flex;align-items: center;margin-left: 375px;justify-content: space-between;padding: 0;">
+                        <li>Название</li>
+                        <li style="margin-left: -15px;">Цена</li>
+                        <li style="margin-left: -30px;">Кол-во</li>
+                        <li>Статус</li>
+                    </ul>
+                </div>
+                <div class="card" style="display: flex;align-items: center;flex-direction: row;justify-content: space-between;padding: 20px;margin-top: 40px;">
+                    <div class="icon_card">
+                        <img style="max-width: 150px" src="./img/cardShopOne/klubnika.png" alt="">
+                    </div>
+                    <div class="name_card">
+                        Клубника
+                    </div>
+                    <div class="price_card">
+                        100
+                    </div>
+                    <div class="quantity">
+                        6
+                    </div>
+                    <div class="status">
+                        <select>
+                            <option>Вкл</option>
+                            <option>Выкл</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card" style="display: flex;align-items: center;flex-direction: row;justify-content: space-between;padding: 20px;margin-top: 40px;">
+                    <div class="icon_card">
+                        <img style="max-width: 150px" src="./img/cardLike/horne.svg" alt="">
+                    </div>
+                    <div class="name_card">
+                        Мед
+                    </div>
+                    <div class="price_card">
+                        100
+                    </div>
+                    <div class="quantity">
+                        6
+                    </div>
+                    <div class="status">
+                        <select>
+                            <option>Вкл</option>
+                            <option>Выкл</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card" style="display: flex;align-items: center;flex-direction: row;justify-content: space-between;padding: 20px;margin-top: 40px;">
+                    <div class="icon_card">
+                        <img style="max-width: 150px" src="./img/cardLike/pomidor.svg" alt="">
+                    </div>
+                    <div class="name_card">
+                        Помидор
+                    </div>
+                    <div class="price_card">
+                        100
+                    </div>
+                    <div class="quantity">
+                        6
+                    </div>
+                    <div class="status">
+                        <select>
+                            <option>Вкл</option>
+                            <option>Выкл</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card" style="display: flex;align-items: center;flex-direction: row;justify-content: space-between;padding: 20px;margin-top: 40px;">
+                    <div class="icon_card">
+                        <img style="max-width: 150px" src="./img/cardShopOne/klubnika.png" alt="">
+                    </div>
+                    <div class="name_card">
+                        Клубника
+                    </div>
+                    <div class="price_card">
+                        100
+                    </div>
+                    <div class="quantity">
+                        6
+                    </div>
+                    <div class="status">
+                        <select>
+                            <option>Вкл</option>
+                            <option>Выкл</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card" style="display: flex;align-items: center;flex-direction: row;justify-content: space-between;padding: 20px;margin-top: 40px;">
+                    <div class="icon_card">
+                        <img style="max-width: 150px" src="./img/cardLike/horne.svg" alt="">
+                    </div>
+                    <div class="name_card">
+                        Мед
+                    </div>
+                    <div class="price_card">
+                        100
+                    </div>
+                    <div class="quantity">
+                        6
+                    </div>
+                    <div class="status">
+                        <select>
+                            <option>Вкл</option>
+                            <option>Выкл</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card" style="display: flex;align-items: center;flex-direction: row;justify-content: space-between;padding: 20px;margin-top: 40px;">
+                    <div class="icon_card">
+                        <img style="max-width: 150px" src="./img/cardLike/pomidor.svg" alt="">
+                    </div>
+                    <div class="name_card">
+                        Помидор
+                    </div>
+                    <div class="price_card">
+                        100
+                    </div>
+                    <div class="quantity">
+                        6
+                    </div>
+                    <div class="status">
+                        <select>
+                            <option>Вкл</option>
+                            <option>Выкл</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const btn_minus = document.querySelector('.minus_page');
+    const add_page = document.querySelector('.add_page');
+
+    btn_minus.addEventListener('click' , e => {
+        let page_number = Number(e.target.closest('.btn_admin').children[1].value);
+        console.log(page_number)
+        if (page_number > 1) {
+            e.target.closest('.btn_admin').children[1].value = ++page_number;
+        }
+    })
+</script>
+
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+></script>
+
+</html>

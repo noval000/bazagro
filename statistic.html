@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css"
+            rel="stylesheet"
+    />
+    <style>
+        header {
+            background: #2B904E;
+            padding: 15px;
+        }
+        ul {
+            list-style: none;
+        }
+        header ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: #fff;
+            list-style: none;
+            margin: 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .header_two {
+            display: flex;
+        }
+        .header_two ul a {
+            color: #000;
+        }
+        .dropdown-menu>li:last-child,
+        .dropdown-menu>li:first-child {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px!important;
+            border-bottom-left-radius: 10px!important;
+            border-bottom-right-radius: 10px!important;
+        }
+        .header_two ul {
+            --mdb-dropdown-item-border-radius: 10px!important;
+            border-top-left-radius: 10px!important;
+            border-top-right-radius: 10px!important;
+            border-bottom-left-radius: 10px!important;
+            border-bottom-right-radius: 10px!important;
+            background: #ccc;
+        }
+        .header_two ul li {
+            background: #ccc;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .none {
+            display: none;
+        }
+        .menu a {
+            margin: 5px 0;
+            transition: .5s all ease;
+            border-bottom: 1px solid transparent;
+        }
+        .menu a:hover {
+            border-bottom: 1px solid #000;
+        }
+
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        select {
+            border: none;
+        }
+        .dropdown-item {
+            border-radius: 10px!important;
+        }
+
+
+        /*  grafic  */
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+        .main-container {
+            margin-top: 20px;
+            background: #2B904E;
+            color: #abafc6;
+            border-radius: 5px;
+            padding: 20px;
+            width: 100%;
+            height: calc(100vh - 55.59px - 56px - 20px);
+        }
+
+        .year-stats {
+            white-space: nowrap;
+            max-height: 170px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .year-stats:hover {
+            overflow-x: auto;
+        }
+
+        /* SCROLL BAR STYLE (ONLY WORKS IN CHROME) */
+        /* Width */
+        ::-webkit-scrollbar {
+            height: 5px;
+            width: 100%;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #444e80;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #abafc6;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #5397d6;
+        }
+
+        .month-group {
+            cursor: pointer;
+            max-width: 400px;
+            height: 110px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .bar {
+            background-color: #abafc6;
+            width: 20px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .month-group:hover .bar,
+        .selected .bar {
+            background: #5397d6;
+        }
+
+        .month-group:hover p,
+        .selected p {
+            color: #fff;
+        }
+
+        .h-25 {
+            height: 25%;
+        }
+        .h-50 {
+            height: 50%;
+        }
+        .h-75 {
+            height: 75%;
+        }
+        .h-100 {
+            height: 100%;
+        }
+
+        .stats-info {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: relative;
+        }
+
+        .graph-container {
+            position: relative;
+        }
+
+        .percent {
+            display: block;
+            width: 120px;
+            height: 120px;
+        }
+
+        .circle {
+            stroke: #915db1;
+            fill: none;
+            stroke-width: 3;
+        }
+
+        .circle:nth-child(2) {
+            stroke: #e59f3c;
+        }
+
+        .circle:nth-child(3) {
+            stroke: #5397d6;
+        }
+
+        .circle:nth-child(4) {
+            stroke: #4cc790;
+        }
+
+        .graph-container p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .info p {
+            margin-bottom: 10px;
+        }
+
+        .info span {
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul style="padding: 0;">
+                <li style="margin-right: 40px;">
+                    <a href="./index.html">Вернуться на главную</a>
+                </li>
+                <li>
+                    Продавец: АгроПром
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="header_two" style="margin-top: 20px;">
+            <div class="dropdown show">
+                <button style="background: #2B904E!important;"
+                        data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    Товары
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="./panel.html">Все товары</a></li>
+                    <li><a class="dropdown-item active" href="#">Импорт</a></li>
+                </ul>
+            </div>
+            <div class="dropdown show" style="margin-left: 30px;">
+                <button style="background: #2B904E!important;"
+                        data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    Профиль
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="./profile.html">Редактировать профиль</a></li>
+                </ul>
+            </div>
+            <div class="dropdown show" style="margin-left: 30px;">
+                <button style="background: #2B904E!important;"
+                        data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton2"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    Статистика
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item" href="./statistic.html">Прибыль</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="year-stats">
+            <div class="month-group">
+                <div class="bar h-100"></div>
+                <p class="month">Январь</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-50"></div>
+                <p class="month">Февраль</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-75"></div>
+                <p class="month">Март</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-25"></div>
+                <p class="month">Апрель</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-100"></div>
+                <p class="month">Май</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-50"></div>
+                <p class="month">Июнь</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-75"></div>
+                <p class="month">Июль</p>
+            </div>
+            <div class="month-group selected">
+                <div class="bar h-25"></div>
+                <p class="month">Август</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-50"></div>
+                <p class="month">Сентябрь</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-75"></div>
+                <p class="month">Октябрь</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-25"></div>
+                <p class="month">Ноябрь</p>
+            </div>
+            <div class="month-group">
+                <div class="bar h-100"></div>
+                <p class="month">Декабрь</p>
+            </div>
+        </div>
+
+        <div class="stats-info">
+            <div class="graph-container">
+                <div class="percent">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+      a 15.9155 15.9155 0 0 1 0 31.831
+      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="85, 100" d="M18 2.0845
+      a 15.9155 15.9155 0 0 1 0 31.831
+      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+      a 15.9155 15.9155 0 0 1 0 31.831
+      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+      a 15.9155 15.9155 0 0 1 0 31.831
+      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                </div>
+                <p>Общая прибыль: 1 110 213 рублей</p>
+            </div>
+
+            <div class="info">
+                <p>Наиболее продаваемая категория <br /><span>Фрукты и ягоды</span></p>
+                <p>Бонус <span>100 000 руб.</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

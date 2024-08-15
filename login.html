@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .div_login {
+        width: auto;
+        height: auto;
+        background: #ccc;
+        border-radius: 10px;
+    }
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .input-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .input-wrap button {
+        width: 100%;
+        margin-top: 20px;
+        height: 30px;
+        cursor: pointer;
+    }
+    input[name='login'] {
+        margin-bottom: 10px;
+    }
+</style>
+
+
+
+<body>
+    <div class="div_login">
+        <div class="form">
+            <div class="input-wrap">
+                <input class="login" type="text" name="login" placeholder="Введите логин">
+                <input class="password" type="text" name="password" placeholder="Введите пароль">
+                <button class="login_btn" type="submit">Войти</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+
+
+
+    const login_btn = document.querySelector('.login_btn');
+    login_btn.addEventListener('click' , e => {
+        const pass = e.target.closest('.input-wrap').children[1].value;
+        const login = e.target.closest('.input-wrap').children[0].value;
+        console.log(typeof(pass), login)
+        if (login === '1') {
+            if (pass === '1') {
+                window.location.href = 'panel.html';
+            } else {
+                console.log('Pass is not 1');  // Для отладки, если условие pass не выполняется
+            }
+        } else {
+            console.log('Login is not 1');  // Для отладки, если условие login не выполняется
+        }
+    })
+
+
+
+</script>
+</html>

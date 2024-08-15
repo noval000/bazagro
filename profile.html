@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css"
+            rel="stylesheet"
+    />
+    <style>
+        header {
+            background: #2B904E;
+            padding: 15px;
+        }
+        ul {
+            list-style: none;
+        }
+        header ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: #fff;
+            list-style: none;
+            margin: 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .header_two {
+            display: flex;
+        }
+        .header_two ul a {
+            color: #000;
+        }
+        .dropdown-menu>li:last-child,
+        .dropdown-menu>li:first-child {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px!important;
+            border-bottom-left-radius: 10px!important;
+            border-bottom-right-radius: 10px!important;
+        }
+        .header_two ul {
+            --mdb-dropdown-item-border-radius: 10px!important;
+            border-top-left-radius: 10px!important;
+            border-top-right-radius: 10px!important;
+            border-bottom-left-radius: 10px!important;
+            border-bottom-right-radius: 10px!important;
+            background: #ccc;
+        }
+        .header_two ul li {
+            background: #ccc;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .none {
+            display: none;
+        }
+        .menu a {
+            margin: 5px 0;
+            transition: .5s all ease;
+            border-bottom: 1px solid transparent;
+        }
+        .menu a:hover {
+            border-bottom: 1px solid #000;
+        }
+
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        select {
+            border: none;
+        }
+        .dropdown-item {
+            border-radius: 10px!important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul style="padding: 0;">
+                <li style="margin-right: 40px;">
+                    <a href="./index.html">Вернуться на главную</a>
+                </li>
+                <li>
+                    Продавец: АгроПром
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="header_two" style="margin-top: 20px;">
+            <div class="dropdown show">
+                <button style="background: #2B904E!important;"
+                        data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    Товары
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="./panel.html">Все товары</a></li>
+                    <li><a class="dropdown-item" href="./import.html">Импорт</a></li>
+                </ul>
+            </div>
+            <div class="dropdown show" style="margin-left: 30px;">
+                <button style="background: #2B904E!important;"
+                        data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    Профиль
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item active" href="./profile.html">Редактировать профиль</a></li>
+                </ul>
+            </div>
+            <div class="dropdown show" style="margin-left: 30px;">
+                <button style="background: #2B904E!important;"
+                        data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton2"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    Статистика
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item" href="./statistic.html">Прибыль</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block_profile" style="display: flex;justify-content: space-between;align-items: flex-start;margin-top: 40px;">
+            <div class="block_avatar" style="display:flex;flex-direction: column;align-items: center">
+                <span><h4>АгроПром</h4></span>
+                <img style="max-width: 400px;height: 400px;" src="./img/cardImage/seed.svg"/>
+            </div>
+            <div class="block_profile" style="display: flex;flex-direction:column;align-items: flex-end;background: #ccc;padding: 20px;">
+                <div class="block_one_posi" style="padding: 10px 0;border-bottom: 1px solid #fff;width: 100%;">
+                    <span style="margin-right: 10px;">Фото профиля:</span>
+                    <input type="file"/>
+                </div>
+                <div class="block_one_posi" style="padding: 10px 0;border-bottom: 1px solid #fff;width: 100%;">
+                    <span style="margin-right: 10px;">Ваше имя:</span>
+                    <input style="border: none;background: transparent" type="text" name="name" value="АгроПром"/>
+                </div>
+                <div class="block_one_posi" style="padding: 10px 0;border-bottom: 1px solid #fff;width: 100%;">
+                    <span style="margin-right: 10px;">Логин:</span>
+                    <input style="border: none;background: transparent" type="text" name="name" value="1"/>
+                </div>
+                <div class="block_one_posi" style="padding: 10px 0;border-bottom: 1px solid #fff;width: 100%;">
+                    <span style="margin-right: 10px;">Пароль:</span>
+                    <input style="border: none;background: transparent" type="text" name="name" value="1"/>
+                </div>
+                <div class="block_one_posi" style="padding: 10px 0;border-bottom: 1px solid #fff;width: 100%;">
+                    <span style="margin-right: 10px;">Почта:</span>
+                    <input style="border: none;background: transparent" type="text" name="name" value="agroprom@mail.ru"/>
+                </div>
+                <div class="block_one_posi" style="padding: 10px 0;border-bottom: 1px solid #fff;width: 100%;">
+                    <span style="margin-right: 10px;">ИНН:</span>
+                    <input style="border: none;background: transparent" type="text" name="name" value="13792742913619"/>
+                </div>
+                <div class="block_one_posi" style="padding: 10px 0;border-bottom: 1px solid #fff;width: 100%;">
+                    <span style="margin-right: 10px;">ОГРН:</span>
+                    <input style="border: none;background: transparent" type="text" name="name" value="696080"/>
+                </div>
+                <button class="save_profile" style="margin-top: 20px;background: #fff;border: none;">Сохранить изменения</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+    <script>
+        document.querySelector('input[type="file"]').onchange = event => {
+            let reader = new FileReader();
+            reader.onload = e => document.querySelector('img').src = e.target.result;
+            reader.readAsDataURL(event.target.files[0]);
+        };
+
+
+    </script>
+    <!-- MDB -->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+    ></script>
+</html>

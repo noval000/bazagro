@@ -1,0 +1,665 @@
+@media (max-width: 1535px) {
+    .textTsitata {
+        padding: 15px 16px 15px 51px;
+    }
+    .blockImageAuthor {
+        padding: 10px;
+        width: 80%;
+    }
+}
+@media (max-width: 1520px) {
+    .subtitleColCompany {
+        width: 650px;
+    }
+    .btnMoreInfo {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 1279px) {
+    .d-noneImageBgAbout {
+        display: none;
+    }
+    .subtitleColCompany {
+        width: 100%;
+    }
+    .aboutCompany {
+        height: auto;
+    }
+    .btnAndPriceCardLike .priceFullCardLike, .addToCart {
+        width: 80px;
+        height: 30px;
+    }
+    .counterQuantityCardLike .counterInputQuantity {
+        width: 30px;
+        height: 30px;
+    }
+    .btnAndPriceCardLike {
+        margin-left: 15px;
+    }
+    .mediaFlexLikedBlock {
+        display: flex;
+        width: 33%;
+    }
+    .profileAndCheck {
+        margin-left: 40px;
+    }
+    .header_check, .header_profile {
+        padding-bottom: 0;
+    }
+    .shopCard {
+        margin-left: 2px;
+    }
+    .likedCard, .shopCard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .blockCall a {
+        font-size: 14px;
+    }
+    .blockCall span {
+        cursor: pointer;
+        font-size: 14px;
+        color: #565656;
+        transition: .5s all ease;
+        border-bottom: 1px solid #565656;
+    }
+    .likedCard svg, .shopCard svg {
+        width: 20px;
+        height: 20px;
+    }
+    .likedCard::after, .shopCard::after {
+        content: '1';
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #2B904E;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .flex-end-media1279 {
+        justify-content: flex-end!important;
+    }
+    .blockBtnCard {
+        margin-left: 10px;
+    }
+    .textHeader {
+        display: none;
+    }
+    .menu ul li:not(:last-child) {
+        margin-right: 20px;
+    }
+    .blockImageAuthor {
+        width: 100%;
+    }
+    .textTsitata {
+        padding: 12px 16px 12px 35px;
+        font-size: 14px;
+    }
+    .titleRostProizvodstva {
+        font-size: 18px;
+    }
+    .textMainBlockResheniya {
+        font-size: 24px;
+    }
+    .subtitleRostProizvodstva {
+        font-size: 14px;
+    }
+    .iconArrowRostProizvodstva img {
+        width: 5%;
+        margin-top: 10px;
+    }
+    .iconTsitata {
+        top: 5px;
+        left: 5px;
+    }
+    .titleSection, .titleBlockCompany {
+        font-size: 24px;
+    }
+    .titleNews, .titleColCompany {
+        font-size: 18px;
+    }
+    .subtitleNews {
+        font-size: 14px;
+    }
+    .allInfo {
+        font-size: 18px;
+        mt
+    }
+    .allInfo svg {
+        margin-top: 2px;
+    }
+    .itc-slider-indicators {
+        top: -76px;
+    }
+    .cowImg img {
+        max-width: 60%;
+        right: 18px;
+        bottom: 52px;
+    }
+    .bgBotR img {
+        max-width: 80%;
+    }
+    .subtitleCard {
+        font-size: 20px;
+    }
+    .titleCard {
+        font-size: 14px;
+    }
+    .subscribeFooter .subscribeInput {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .menuFooter li {
+        font-size: 14px;
+    }
+    .menuFooter li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    .nameMenuFooter {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .newsTitleFooter {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .mr15Media1279 {
+        margin-right: 15px;
+    }
+    .inputSubs input[placeholder] {
+        font-size: 14px;
+        padding: 7px 0 7px 10px;
+    }
+}
+@media (max-width: 1023px) {
+    .icon_header_check, .icon_header_profile {
+        width: 20px;
+        height: 20px;
+    }
+    .menu ul li a {
+        font-size: 12px;
+    }
+    .namePosition {
+        font-size: 12px;
+    }
+    .mobile1023px {
+        display: block;
+    }
+    .sliderMore1023px {
+        display: none;
+    }
+    .cardLike {
+        width: 100%;
+    }
+    .itc-slider-indicator {
+        width: 70px;
+    }
+    .itc-slider-indicator-active {
+        width: 100px;
+    }
+    .titlePhoto {
+        font-size: 20px;
+    }
+    .subtitleMainPhoto {
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .mouse-parallax {
+        height: 300px;
+    }
+    .likedCard {
+        position: fixed;
+        top: 25px;
+        right: 10px;
+        z-index: 9999;
+    }
+    .shopCard {
+        position: fixed;
+        top: 25px;
+        right: 50px;
+        z-index: 9999;
+    }
+    .btnCatalog {
+        margin-right: 35px;
+        font-size: 18px;
+        height: 30px;
+    }
+    .marquee {
+        margin: 20px 0;
+    }
+    .slider {
+        height: 60px;
+    }
+    .slide {
+        width: 120px;
+    }
+    .slide img {
+        width: 50%;
+    }
+    .inpSearch {
+        padding: 2px 5px 2px 15px;
+    }
+    .inpSearchBtn {
+        padding: 5px 0 5px 5px;
+    }
+    .inpSearchBtn svg {
+        margin-right: -5px;
+    }
+    header {
+        padding: 20px 0 20px 0;
+        top: 0;
+    }
+    .search {
+        margin-bottom: 20px;
+    }
+    .mr15Media1279 {
+        width: 20%;
+    }
+    .colMedia1023px {
+        flex-direction: row;
+        align-items: center;
+    }
+    .inputSubs {
+        margin-right: 10px;
+    }
+    .inputSubs img {
+        right: 5px;
+        width: 15%;
+        top: 5px;
+    }
+    .newsTitleFooter {
+        font-size: 14px;
+        font-weight: 500;
+        text-align: end;
+    }
+    .subscribeFooter .subscribeInput {
+        padding: 6px 10px;
+    }
+    .rowNewsMedia1023px {
+        flex-direction: column;
+    }
+    .rowNewsMedia1023px_v2 {
+        flex-direction: column-reverse;
+    }
+    .newsImage img {
+        width: 75%;
+        border-radius: 10px;
+    }
+    .newsImage {
+        display: flex;
+        justify-content: center !important;
+        margin-top: 20px;
+    }
+    .allInfo {
+        bottom: -15px;
+    }
+    .textTsitata {
+        font-size: 12px;
+    }
+    .blockImageAuthor {
+        display: none;
+    }
+    .textMainBlockResheniya {
+        width: 220px;
+        line-height: 25px;
+        padding: 0 0 15px 0;
+        font-size: 19px;
+    }
+    .btn-up {
+        width: 35px;
+        height: 35px;
+    }
+    .socialNetworks li:not(:last-child) {
+        margin-right: 8px;
+    }
+    .mr15Media1279 {
+        align-items: center;
+        width: 100%;
+    }
+    footer {
+        padding: 10px 0 35px 0;
+    }
+    .center1023pxMobile {;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 30%;
+    }
+    .center1023pxFlex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footerCenterSubscribe {
+        margin-top: 20px;
+        justify-content: space-between!important;
+        align-items: center!important;
+        flex-direction: row!important;
+    }
+    .centerTopFooter1023px {
+        justify-content: space-between!important;
+        align-items: flex-end;
+        flex-direction: row!important;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 15px;
+    }
+    .titleCard {
+        padding: 4px 8px;
+    }
+    .w98sliderCardShop1023px {
+        width: 98%;
+        margin-bottom: 10px;
+    }
+    .w51media1023px {
+        width: 51%;
+    }
+    .col-md-w3233 {
+        width: 47%;
+    }
+    .col-md-w3233 {
+        width: 47%;
+    }
+    .ml15media1023px {
+        margin-left: 15px;
+    }
+    .cowImg img {
+        max-width: 40%;
+        right: 80px;
+        bottom: 0;
+    }
+}
+@media (max-width: 768px) {
+    .blockMenuAndAccount {
+        display: none!important;
+    }
+    .cityBlock {
+        display: none;
+    }
+    header {
+        padding: 20px 0 20px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+        background: #F6F6F6;
+    }
+    .mtHeader {
+        margin-top: 100px;
+    }
+    .b-menu {
+        display: block;
+    }
+    .mediaFlexLikedBlock {
+        width: 49%;
+    }
+    .addToCart {
+        border-radius: 5px 0 0 5px;
+        font-size: 14px;
+    }
+    .btnAndPriceCardLike .priceFullCardLike, .addToCart {
+        width: 68px;
+        height: 30px;
+    }
+    .btnAndPriceCardLike .priceFullCardLike {
+        font-size: 14px;
+    }
+    .w40media768px {
+        width: 40%;
+    }
+    .w60media768px {
+        width: 59%;
+    }
+    .AllMainBlockResheniya {
+        height: 400px;
+    }
+    .textMainBlockResheniya {
+        width: 185px;
+        line-height: 20px;
+        padding: 0 0 10px 0;
+        font-size: 16px;
+    }
+    .iconTextMainBlockResheniya img {
+        max-width: 70%;
+    }
+    .iconTextMainBlockResheniya {
+        bottom: 0;
+        right: -10px;
+    }
+    .blockImageTop {
+        display: none!important;
+    }
+    .titleRostProizvodstva {
+        font-size: 16px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .subtitleRostProizvodstva {
+        font-size: 12px;
+    }
+    .blockRostProizvodstva {
+        padding: 5px 10px;
+    }
+    .likedCard, .shopCard {
+        display: none;
+    }
+    .titlePhoto {
+        font-size: 18px;
+    }
+    .w98sliderCardShop1023px {
+        width: 97%;
+    }
+    .col-md-w3233 {
+        width: 46%;
+    }
+    .cardShop {
+        height: 150px;
+    }
+    .cowImg img {
+        max-width: 30%;
+        right: 50px;
+    }
+    .bgBotR img {
+        max-width: 60%;
+    }
+    .hautoCardShop {
+        height: auto;
+    }
+    .pb100 {
+        padding-bottom: 50px;
+    }
+}
+@media (max-width: 609px) {
+    .blockTextForMainPhoto {
+        top: 15px;
+        left: 30px;
+    }
+    .titlePhoto {
+        font-size: 16px;
+    }
+    .itc-slider-indicator {
+        width: 40px;
+    }
+    .itc-slider-indicator-active {
+        width: 60px;
+    }
+    .cardLike .imgRatingCardLike {
+        width: 135px;
+    }
+    .paddingCardLike {
+        padding: 0 10px 10px 10px;
+    }
+    .titleCardLike {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    .ratingCardLike {
+        margin-bottom: 3px;
+    }
+    .subtitleCardLike {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    .counterQuantityCardLike .counterInputQuantity {
+        font-size: 14px;
+        font-weight: 500;
+        width: 25px;
+        height: 25px;
+    }
+    .priceCardLike span {
+        font-size: 16px;
+    }
+    .priceCardLike {
+        font-size: 16px;
+    }
+    .blockQuantityAndBtn {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: flex-start!important;
+    }
+    .btnAndPriceCardLike {
+        margin-left: 0;
+    }
+    .counterQuantityCardLike {
+        margin-bottom: 5px;
+    }
+    .btnAndPriceCardLike .priceFullCardLike, .addToCart {
+        width: 50%;
+        height: 23px;
+        font-weight: 500;
+    }
+    .plusQuantityCardLike, .minusQuantityCardLike {
+        font-size: 17px;
+    }
+    .flex-end-media1279 {
+        display: none!important;
+    }
+    .inputForSearch {
+        width: 60%;
+    }
+    .titlePhoto span {
+        width: 15%;
+    }
+    .textMainBlockResheniya {
+        width: 130px;
+        font-size: 14px;
+    }
+    .iconTextMainBlockResheniya img {
+        max-width: 50%;
+    }
+    .iconTextMainBlockResheniya {
+        right: -20px;
+    }
+    .w40media768px {
+        display: none;
+    }
+    .w60media768px {
+        width: 100%;
+    }
+    .blockImageAuthor {
+        display: block;
+        width: 75%;
+    }
+    .textTsitata {
+        font-size: 14px;
+    }
+    .blockBottomTsitata {
+        margin-top: 20px;
+    }
+    .subtitleRostProizvodstva {
+        font-size: 14px;
+    }
+}
+@media (max-width: 517px) {
+    .w100mobile517px {
+        width: 100%!important;
+        border-top: 1px solid #fff;
+        padding-top: 15px;
+    }
+    .center1023pxMobile {
+        width: 49%;
+    }
+    .titlePhoto {
+        font-size: 14px;
+    }
+    .blockImageAuthor {
+        display: block;
+        width: 140%;
+    }
+    .subtitleMainPhoto {
+        width: 300px;
+    }
+    .titlePhoto span {
+        display: none;
+    }
+}
+@media (max-width: 461px) {
+    .itc-slider-indicator {
+        width: 20px;
+    }
+    .itc-slider-indicator-active {
+        width: 40px;
+    }
+    .textTsitata {
+        padding: 15px 0 12px 10px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .blockImageAuthor {
+        width: 180%;
+    }
+}
+
+@media (max-width: 391px) {
+    .itc-slider-indicator {
+        width: 10px;
+        height: 4px;
+    }
+    .itc-slider-indicator-active {
+        width: 20px;
+        height: 4px;
+    }
+    .blockBottomTsitata {
+        flex-direction: column;
+    }
+    .blockImageAuthor {
+        display: flex;
+        width: 70%;
+        margin-bottom: -100px;
+    }
+}
+@media (max-width: 377px) {
+    .subtitleMainPhoto {
+        width: auto;
+        margin-left: 20px;
+        border-radius: 0;
+        bottom: 140px;
+        font-size: 12px;
+    }
+    .titlePhoto {
+        font-size: 12px;
+    }
+    .inputForSearch input[placeholder="Поиск по товарам"] {
+        font-size: 12px;
+    }
+    .btnCatalog {
+        font-size: 16px;
+        height: 24px;
+    }
+    .blockImageAuthor {
+        width: 0;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 328px) {
+    .subtitleMainPhoto {
+        bottom: 120px;
+    }
+}
+
+
+

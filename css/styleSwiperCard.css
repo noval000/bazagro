@@ -1,0 +1,141 @@
+.slider {
+    padding: 32px 0;
+    color: #000;
+    height: auto;
+}
+.slider .swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider__flex {
+    display: flex;
+    align-items: flex-start;
+}
+.slider__col {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+.slider__prev,
+.slider__next {
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #E2E2E2;
+    border-radius: 10px;
+    width: 85px;
+}
+.slider__prev:focus,
+.slider__next:focus {
+    outline: none;
+}
+.slider__thumbs {
+    height: calc(400px - 96px);
+}
+.slider__thumbs .slider__image {
+    transition: 0.25s;
+    opacity: 0.5;
+    width: 85px;
+    height: 85px;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider__thumbs .slider__image:hover {
+    opacity: 1;
+}
+.slider__thumbs .swiper-slide-thumb-active .slider__image {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider__images {
+    height: 400px;
+}
+.slider__images .slider__image img {
+    transition: 3s;
+}
+/*.slider__images .slider__image:hover img {*/
+/*    transform: scale(1.1);*/
+/*}*/
+.slider__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.slider__image img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    width: 350px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+@media (max-width: 767.98px) {
+    .slider__flex {
+        flex-direction: column-reverse;
+    }
+    .slider__col {
+        flex-direction: row;
+        align-items: center;
+        margin-right: 0;
+        margin-top: 24px;
+        width: 100%;
+    }
+    .slider__images {
+        width: 100%;
+    }
+    .slider__thumbs {
+        height: 100px;
+        width: calc(100% - 96px);
+        margin: 0 16px;
+    }
+    .slider__prev,
+    .slider__next {
+        height: auto;
+        width: 32px;
+    }
+}
+
+.slider::after {
+    right: unset;
+    top: unset;
+    transform: unset;
+}
+
+.slider::before, .slider::after {
+    position: unset;
+    background-image: unset;
+    content: '';
+    height: unset;
+    width: unset;
+    z-index: 2;
+    pointer-events: unset;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__next {
+    margin-top: 20px;
+}
+
+.slider__prev {
+    margin-bottom: 20px;
+}

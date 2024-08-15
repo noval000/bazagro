@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Reading </title>
+    <meta charset="utf-8" />
+</head>
+<body id="target">
+<div id="page-content">
+    <h1 style="color: #fbceb5; background-color: 2d334a;
+            background: linear-gradient(to left, #6e5773 , #d8b5b5);" >
+        The Magic Of Reading </h1>
+
+    <p>
+        Reading is probably one of the most beneficial and feasible activities that a man can do.
+        It is through reading that a person is going to be able to discover new ideas, concepts, places, and people.
+        Some people even describe reading as a journey that starts as the opening of a page, and finishes as the last page is turned.
+        The reason why reading is so important is because reading is relaxing to our mind and soul; it is a way for children to reach out to the world,
+        and it improves our thinking process.
+    </p>
+
+    <br/>
+</div>
+
+<div style="text-align: center;">
+    <button id="click-button" style="background-color:rosybrown; border-color: rosybrown; height: 35px;"> Convert to PDF </button>
+</div>
+
+
+<div id="content">
+    <h3>Hello, this is a H3 tag</h3>
+    <p>A paragraph</p>
+</div>
+<div id="editor"></div>
+<button id="cmd">generate PDF</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        var specialElementHandlers = {
+            "#editor": function(element, rendrer){
+                return true;
+            }
+        };
+
+        $('#click-button').click(function(){
+
+            var myDocument = new jsPDF();
+
+            myDocument.fromHTML($("#target").html(), 15, 15, {
+                "width":170,
+                "elementHandlers": specialElementHandlers
+            });
+
+            myDocument.save("File.pdf");
+        });
+
+    });
+
+
+</script>
+</html>
